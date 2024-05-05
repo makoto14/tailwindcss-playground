@@ -17,6 +17,7 @@ const button = cva("button", {
     color: {
       red: "bg-red-800",
       blue: "bg-blue-800",
+      yellow: "bg-yellow-800",
     },
   },
   defaultVariants: {
@@ -27,6 +28,6 @@ const button = cva("button", {
 
 export type ButtonProps = VariantProps<typeof button>;
 
-export const Button: FC<ButtonProps> = ({ size }) => {
-  return <button className={button({ size })}>button</button>;
+export const Button: FC<ButtonProps> = ({ size, color }) => {
+  return <button className={button({ size, color })}>button</button>;
 };
